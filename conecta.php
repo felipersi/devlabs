@@ -1,4 +1,9 @@
-<?php 
-$conecta = mysql_connect("mysql.eduardo.machado.kinghost.net", "eduardo", "mudar5555") or print (mysql_error()); 
-mysql_select_db("eduardo", $conecta) or print(mysql_error()); 
-?>
+<?php
+    try{
+    $conecta = new PDO('mysql:host=mysql01-farm8.kinghost.net;dbname=luisfrs03', 'luisfrs03','l123321l')or print (mysql_error());
+    }catch(PDOException $e){
+
+    echo $e->getMessage();
+
+    }
+    ?>
